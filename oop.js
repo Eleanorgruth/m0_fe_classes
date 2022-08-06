@@ -115,14 +115,14 @@ class Hobbit {
 }
 
 
-var hobbit1 = new Hobbit("Frodo", "dis");
+var hobbit1 = new Hobbit("Frodo", "happy");
 hobbit1.changeIsAdult();
 console.log(hobbit1);
 
-var hobbit2 = new Hobbit("Sam", "dis");
+var hobbit2 = new Hobbit("Sam", "sad");
 hobbit1.changeIsOld();
 console.log(hobbit2);
 
-var hobbit3 = new Hobbit ("Hobby", "disp");
+var hobbit3 = new Hobbit ("Hobby", "mad");
 hobbit3.celebrateBirthday();
 console.log(hobbit3);
