@@ -5,15 +5,14 @@
 class Unicorn {
   constructor(name){
     this.name = name;
-    this.color = "silver"
+    this.color = "silver";
   }
-  say (){
-    console.log(`*~*${this.name}*~*`)
+  say(string) {
+    return (`*~*${string}*~*`)
   }
 }
-  var unicorn1 = new Unicorn("Sparkle");
-  unicorn1.say();
-  console.log(unicorn1);
+  var sparkle = new Unicorn("Sparkle");
+  console.log(sparkle.say(`Hello, my name is ${sparkle.name}`));
 
 
 
@@ -24,27 +23,25 @@ class Unicorn {
 // it should have a drink method. When called, the thirsty property changes to false
 
 class Vampire {
-  constructor(name){
+  constructor(name, pet = "bat") {
     this.name = name;
-    this.pet = "bat";
+    this.pet = pet;
     this.thirsty = true;
   }
 
-  changePet(newPet) {
-    this.pet = newPet;
-  }
-  changeThirsty(newThirsty){
+  drink(){
     this.thirsty = false;
   }
 }
 
-var vampire1 = new Vampire("Edward");
-vampire1.changeThirsty();
-vampire1.changePet("cat");
-console.log(vampire1)
-
+var vampire1 = new Vampire("Edward", "owl");
 var vampire2 = new Vampire("Bella");
-console.log(vampire2)
+console.log(vampire1);
+console.log(vampire2);
+
+vampire2.drink();
+console.log(vampire2);
+
 
 
 //  Write a Dragon class
@@ -62,18 +59,26 @@ class Dragon{
     this.rider = rider;
     this.color = color;
     this.hungry = true;
+    this.eatCount = 0;
   }
-  changeHungry(newHungry){
-    if (meals >= 4) {
+  eat() {
+    this.eatCount +=1;
+    if (this.eatCount >= 4) {
         this.hungry = false;
       }
     }
     }
 
  var dragon1 = new Dragon("Garfield", "Lisa", "pink")
- var meals = 5
- dragon1.changeHungry();
  console.log(dragon1)
+ dragon1.eat();
+ console.log(dragon1)
+ dragon1.eat();
+ dragon1.eat();
+ dragon1.eat();
+ dragon1.eat();
+ console.log(dragon1)
+
 
 //  BIG CHALLNEGE: Write a Hobbit class
 //  it should have a dynamic name property (string)
@@ -85,44 +90,80 @@ class Dragon{
 //  it should have a hasRing property. If the Hobbit's name is "Frodo", true, if not, false.
 
 class Hobbit {
-  constructor (name, disposition, number) {
+  constructor (name, disposition) {
     this.name = name;
     this.disposition = disposition;
     this.age = 0;
     this.isAdult = false;
     this.isOld = false;
     this.hasRing = false;
-  }
-  celebrateBirthday(newAge){
-  console.log(this.age + 1)
-  }
 
-  changeIsAdult(newIsAdult){
-    if (this.age >= 33) {
+  if (this.name === "Frodo") {
+    this.hasRing = true;
+}
+}
+
+  celebrateBirthday(){
+    this.age += 1;
+    if (this.age >= 101) {
+      this.isOld = true;
+  }
+  if (this.age >= 33) {
         this.isAdult = true;
-  }
-  }
-  changeIsOld(newIsOld){
-  if (this.age >= 101) {
-      this.isOld = false;
-  }
-  }
-  changeName(newName){
-      if (this.name === "Frodo") {
-        this.hasRing = false;
 }
 }
 }
 
 
 var hobbit1 = new Hobbit("Frodo", "happy");
-hobbit1.changeIsAdult();
 console.log(hobbit1);
-
-var hobbit2 = new Hobbit("Sam", "sad");
-hobbit1.changeIsOld();
-console.log(hobbit2);
-
-var hobbit3 = new Hobbit ("Hobby", "mad");
-hobbit3.celebrateBirthday();
-console.log(hobbit3);
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+hobbit1.celebrateBirthday();
+console.log(hobbit1);
